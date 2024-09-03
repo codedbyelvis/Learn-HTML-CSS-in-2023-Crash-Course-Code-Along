@@ -1,0 +1,53 @@
+html {
+    font-size: 62.5%;
+    /* ^above conversion allows for direct use of Figma design current units
+    (but must lose a decimal place and use rem/em units in code).
+    Ex: 52 Font size in Figma is 5.2 Rem */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* rem vs em: rem stands for root em, and only listens to the root(html font size 62.5%), 
+and ignores other parent em specifications,(ex: if nav font-size: 3em, a font size: 1.6rem would ignor it).*/
+nav {
+    margin: 4em;
+    
+    >ul {
+        list-style-type: none;
+        display: flex;
+        gap: 4.1em;
+        margin: 0;
+
+        >li{
+            >a{
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                position: relative;
+            }
+/*position relative is letting the position absolute know to base its specifications(ex: width, bottom) based on the parent.*/
+            >a.active:before {
+                position: absolute;
+                content: "";
+                width: 35%;
+                height: 1px;
+                border-bottom: 2px solid black;
+                bottom: -6px;
+            }
+        }
+    }
+}
