@@ -183,7 +183,8 @@ p.details {
 
 .card1 {
     grid-area: left;
-    background-image: url(../images/clothing1.jpg);
+    background: url(../images/clothing1.jpg) no-repeat;
+    /* background: no-repeat; */
     position: relative;
 }
 
@@ -200,10 +201,10 @@ p.details {
 }
 
 .card2 {
-    background-image: url(../images/clothing2.jpg);
+    background: url(../images/clothing2.jpg) no-repeat;
 }
 .card3 {
-    background-image: url(../images/clothing3.jpg);
+    background: url(../images/clothing3.jpg) no-repeat;
 }
 
 .card-details {
@@ -259,6 +260,113 @@ nav ul li a:hover::before {
 
 .card:hover .card-details {
     transform: translateY(-20px);
+}
+
+    /* M e d i a - Q u e r i e s - S e c t i o n */
+
+@media only screen and (max-width: 1260px){
+    body {
+        background-color: rgba(171, 235, 198)   ;
+    }
+    
+    header {
+        margin-left: 4em;
+    }
+    .left-col {
+        margin-left: 4em;
+    }
+
+    .card:hover {
+        background-size: 110%;
+        background-color: rgb(0,0,0,0.65);
+z-index: 1;
+    }
+
+    .card1 {
+        background-size: 150%;
+        background-color: rgba(219,219,219,255);
+       > .card-details {
+        width: 80%;
+        gap: 2em;
+       }
+   }
+
+   .card1::before {
+        width: 30%;
+        height: 100%;
+        top: 10px;
+        left: -60px;
+    }
+
+    .card2 {
+        grid-area: right;
+        background-size: cover;
+        background-color: rgba(3,150,189,255);
+        > .card-details {
+            width: 80%;
+            gap: 2em;
+           }
+   }
+
+   .card3 {
+    position: relative;
+        grid-area: bottom;
+        background-size: 150%;
+        > .card-details {
+            width: 80%;
+           }
+   }
+
+    .right-col {
+        margin-right: 4em;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+        "left right"
+        "bottom bottom";
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    body {
+        background-color: rgba(255, 217, 102);
+    }
+    
+    .card {
+        > .card-details {
+            width: 80%;
+            gap: 1em;
+            margin-left: auto;
+            margin-right: auto;
+           }
+       }
+
+    .card:hover {
+        background-size: 100%;
+        background-color: rgb(0,0,0,0.65);
+z-index: 1;
+    }
+
+    .card1::before {
+        width: 20%;
+        height: 100%;
+        top: 10px;
+        left: -60px;
+    }
+
+    .right-col {
+        margin-right: 4em;
+        grid-template-areas: 
+        "left left"
+        "right right"
+        "bottom bottom";
+    }
+}
+
+@media only screen and (max-width: 700px){
+    body {
+        background-color: pink;
+
+    }
 }
 
    /* I n t r o - A n i m a t i o n - S e c t i o n */
