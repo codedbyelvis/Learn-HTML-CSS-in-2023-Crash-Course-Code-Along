@@ -325,7 +325,7 @@ z-index: 1;
         "bottom bottom";
     }
 }
-
+/*When using max-width for media quieries, you start with largest pixel quiery unlike the norm.*/
 @media only screen and (max-width: 1000px){
     body {
         background-color: rgba(255, 217, 102);
@@ -365,7 +365,51 @@ z-index: 1;
 @media only screen and (max-width: 700px){
     body {
         background-color: pink;
+    }
 
+    .card {
+        width: 18em;
+        height: 18em;
+
+        > .card-details {
+            width: 60%;
+            height: 12%;
+            gap: .5em;
+            margin-left: auto;
+            margin-right: auto;
+
+            > div a {
+                font-size: 1.4rem;
+            }
+            
+            > div p {
+                display: none;
+            }
+
+            > .product-price {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .card1::before {
+        width: 39%;
+    }
+
+    .left-col {
+        >.news {
+            padding: 2.5em;
+        }
+    }
+
+    .right-col {
+        margin-right: 1em;
+        gap: 1em;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "left"
+        "right"
+        "bottom";
     }
 }
 
