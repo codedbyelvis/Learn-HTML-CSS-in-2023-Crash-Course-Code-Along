@@ -272,6 +272,7 @@ nav ul li a:hover::before {
     header {
         margin-left: 4em;
     }
+    
     .left-col {
         margin-left: 4em;
     }
@@ -330,6 +331,10 @@ z-index: 1;
     body {
         background-color: rgba(255, 217, 102);
     }
+
+    main {
+        margin-top: 3em;
+    }
     
     .card {
         > .card-details {
@@ -367,9 +372,27 @@ z-index: 1;
         background-color: pink;
     }
 
+    header {
+        margin-left: 2em;
+    }
+
+    main {
+        margin-top: 5em;
+    }
+
+    nav {
+        margin: 2.5em 2em;
+
+        > ul{
+          gap: 2em;
+          padding-left: 0.25em;
+          margin-right: 1em;  
+        }
+    }
+
     .card {
-        width: 18em;
-        height: 18em;
+        width: 20em;
+        height: 15em;
 
         > .card-details {
             width: 60%;
@@ -393,18 +416,60 @@ z-index: 1;
     }
 
     .card1::before {
-        width: 39%;
+        width: 35%;
     }
 
     .left-col {
+        margin-left: 2em;
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        >.subhead {
+            font-size: 1.5em;
+            line-height: 2.5rem;
+            margin: 1.5em 0em;
+        }
+
+        >.cta-btns {
+            
+            >.primary-cta {
+                font-size: 1.6em;
+                text-align: center;
+                padding: 1em;
+                margin-top: .5em;
+            }
+            
+            >.secondary-cta {
+                font-size: 1.6em;
+                margin-top: .5em;
+            }
+        }
+
         >.news {
+            display: block;
             padding: 2.5em;
+            text-align: center;
+
+            > .employees {
+                margin-bottom: .5em;
+            }
+
+            > .details {
+                line-height: 2.5rem;
+            }
+        }
+
+        >.news::before {
+            left: 15px;
         }
     }
 
     .right-col {
-        margin-right: 1em;
-        gap: 1em;
+        margin-right: 2em;
+        gap: 2em;
         grid-template-columns: auto;
         grid-template-areas: 
         "left"
